@@ -11,5 +11,5 @@ Example usage:
 - (optional) using **left mouse** (dragging) provide some *obstacles* for the algorithm
 - (optional) using **right mouse** (dragging) the *obstacles* can be *removed*
 - **start** the algorithm by pressing the button *"Find the path!"* in the lower left corner
-- **clear** the grid by pressing the button *"Clear the grid"* in the lower right corner if you want to star again
+- **clear** the grid by pressing the button *"Clear the grid"* in the lower right corner if you want to start again
 
