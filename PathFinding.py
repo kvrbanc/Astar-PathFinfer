@@ -222,7 +222,6 @@ class GUI():
             self.end_points[1] = self.end_points[0]
             self.end_points[0] = ( x, y )
             # remove the old point and display a new one
-             # delete the "obstacle"
             self.canvas.delete( self.grid[y][x] )
             self.grid[old_point[0]][old_point[1]] = self.canvas.create_rectangle( old_point[0]*self.rectangle_width, old_point[1]*self.rectangle_height, (old_point[0]+1)*self.rectangle_width, (old_point[1]+1)*self.rectangle_height, fill=self.background_color , outline="white")
             self.grid[y][x] = self.canvas.create_rectangle( x*self.rectangle_width, y*self.rectangle_height, (x+1)*self.rectangle_width, (y+1)*self.rectangle_height, fill="#7E10F2" , outline="#B016F8")
