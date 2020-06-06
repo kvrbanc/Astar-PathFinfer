@@ -224,11 +224,11 @@ class GUI():
             # remove the old point and display a new one
             self.canvas.delete( self.grid[y][x] )
             self.grid[old_point[0]][old_point[1]] = self.canvas.create_rectangle( old_point[0]*self.rectangle_width, old_point[1]*self.rectangle_height, (old_point[0]+1)*self.rectangle_width, (old_point[1]+1)*self.rectangle_height, fill=self.background_color , outline="white")
-            self.grid[y][x] = self.canvas.create_rectangle( x*self.rectangle_width, y*self.rectangle_height, (x+1)*self.rectangle_width, (y+1)*self.rectangle_height, fill="#7E10F2" , outline="#B016F8")
+            self.grid[y][x] = self.canvas.create_oval( x*self.rectangle_width, y*self.rectangle_height, (x+1)*self.rectangle_width, (y+1)*self.rectangle_height, fill="#7235EA" , outline="#FA5C00")
         else:
             self.end_points.append( (x , y) )
             # display the point
-            self.grid[y][x] = self.canvas.create_rectangle( x*self.rectangle_width, y*self.rectangle_height, (x+1)*self.rectangle_width, (y+1)*self.rectangle_height, fill="#7E10F2" , outline="#B016F8")
+            self.grid[y][x] = self.canvas.create_oval( x*self.rectangle_width, y*self.rectangle_height, (x+1)*self.rectangle_width, (y+1)*self.rectangle_height, fill="#7235EA" , outline="#FA5C00")
 
     
     def callback_start(self):
@@ -249,7 +249,7 @@ class GUI():
                         continue
                     x = location[0]
                     y = location[1]
-                    self.grid[y][x] = self.canvas.create_rectangle( x*self.rectangle_width, y*self.rectangle_height, (x+1)*self.rectangle_width, (y+1)*self.rectangle_height, fill="#9BF05C" , outline="#B7F48B")
+                    self.grid[y][x] = self.canvas.create_oval( x*self.rectangle_width + 1/4*self.rectangle_width, y*self.rectangle_height + 1/4*self.rectangle_height, (x+1)*self.rectangle_width - 1/4*self.rectangle_width, (y+1)*self.rectangle_height - 1/4*self.rectangle_height, fill="#F61010" , outline="#810E0E")
         else:
             messagebox.showinfo("Info","You haven't provided starting and ending point.")
     
